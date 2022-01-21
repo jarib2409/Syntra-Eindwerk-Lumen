@@ -10,12 +10,12 @@ class CatRelationController extends Controller
     
     public function getAllCatRelations()
     {
-        return response()->json(Cat::all());
+        return response()->json(CatRelation::all());
     }
 
     public function getCatRelationByCatId($id)
     {
-        return response()->json(Cat::where('cat1Id', $id));
+        return response()->json(CatRelation::where('cat1Id', $id));
     }
 
     public function addCatRelation(Request $request)

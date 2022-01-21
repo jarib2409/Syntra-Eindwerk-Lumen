@@ -3,6 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\auto;
+use App\Cat;
+use App\FosterFamily;
+use App\Adopter;
+use App\AdopterPet;
+use App\AdopterRoommate;
+use App\CatPicture;
+use App\CatRelation;
+use App\FosterPet;
+use App\FosterRoommate;
+use App\Notification;
+use App\Shelter;
+use App\VetVisit;
+use App\Weighing;
 use Illuminate\Http\Request;
 use DB;
 // Illuminate\Support\Facades\DB

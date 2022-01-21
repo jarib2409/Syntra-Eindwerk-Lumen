@@ -17,10 +17,52 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->group(['prefix' => 'api', 'middleware' => 'auth'], function () use ($router) {
+$router->group(['prefix' => 'api'], function () use ($router) {
     //get requests
-    $router->get('cats/{name}', ['uses' => 'AutoCatController@showCatName']);
+    // Cat
+    $router->get('cats/{id}', ['uses' => 'AutoCatController@getCatById']);
+    $router->get('cats', ['uses' => 'AutoCatController@getAllCats']);
 
+    // Adopter
+    $router->get('adopters/{id}', ['uses' => 'AutoCatController@getAdopterById']);
+    $router->get('adopters', ['uses' => 'AutoCatController@getAllAdopters']);
+
+    // FosterFamily
+    $router->get('fosterfamilies/{id}', ['uses' => 'AutoCatController@getFosterFamilyById']);
+    $router->get('fosterfamilies', ['uses' => 'AutoCatController@getAllFosterFamilies']);
+
+    // CatRelation
+    $router->get('catrelations/{catId}', ['uses' => 'AutoCatController@getCaRelationByCatId']);
+    $router->get('catrelations', ['uses' => 'AutoCatController@getAllCatRelations']);
+
+    // AdopterRoommate
+    $router->get('adopterroommates/{adopterId}', ['uses' => 'AutoCatController@getRoommateByAdopterId']);
+    $router->get('adopterroommates', ['uses' => 'AutoCatController@getAllAdopterRoommates']);
+/*
+    $router->get('adopters/{id}', ['uses' => 'AutoCatController@getAdopterById']);
+    $router->get('adopters', ['uses' => 'AutoCatController@getAllAdopters']);
+
+    $router->get('adopters/{id}', ['uses' => 'AutoCatController@getAdopterById']);
+    $router->get('adopters', ['uses' => 'AutoCatController@getAllAdopters']);
+
+    $router->get('adopters/{id}', ['uses' => 'AutoCatController@getAdopterById']);
+    $router->get('adopters', ['uses' => 'AutoCatController@getAllAdopters']);
+
+    $router->get('adopters/{id}', ['uses' => 'AutoCatController@getAdopterById']);
+    $router->get('adopters', ['uses' => 'AutoCatController@getAllAdopters']);
+
+    $router->get('adopters/{id}', ['uses' => 'AutoCatController@getAdopterById']);
+    $router->get('adopters', ['uses' => 'AutoCatController@getAllAdopters']);
+
+    $router->get('adopters/{id}', ['uses' => 'AutoCatController@getAdopterById']);
+    $router->get('adopters', ['uses' => 'AutoCatController@getAllAdopters']);
+
+    $router->get('adopters/{id}', ['uses' => 'AutoCatController@getAdopterById']);
+    $router->get('adopters', ['uses' => 'AutoCatController@getAllAdopters']);
+
+    $router->get('adopters/{id}', ['uses' => 'AutoCatController@getAdopterById']);
+    $router->get('adopters', ['uses' => 'AutoCatController@getAllAdopters']);
+*/
     //post request
     $router->post('adopters', ['uses' => 'AutoCatController@addAdopter']);
   
