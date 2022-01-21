@@ -16,3 +16,12 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'api', 'middleware' => 'auth'], function () use ($router) {
+    //get requests
+    $router->get('cats/{name}', ['uses' => 'AutoCatController@showCatName']);
+
+    //post request
+    $router->post('adopters', ['uses' => 'AutoCatController@addAdopter']);
+  
+});
