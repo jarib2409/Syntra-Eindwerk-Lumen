@@ -101,7 +101,7 @@ DROP TABLE IF EXISTS catPictures;
 CREATE TABLE catPictures (
     id INTEGER  PRIMARY KEY AUTO_INCREMENT,
     catId INTEGER,
-    photoId INTEGER
+    photoPath VARCHAR(255),
 );
 
 DROP TABLE IF EXISTS shelters;
