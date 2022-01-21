@@ -14,8 +14,8 @@ class CreateVetVisitsTable extends Migration
     public function up()
     {
         Schema::create('vetVisits', function (Blueprint $table) {
-            $table->id();
-            $table->integer('catId');
+            $table->increments('id');
+            $table->integer('catId', false, true);
             $table->date('date');
             $table->string('reason');
             $table->string('comments');

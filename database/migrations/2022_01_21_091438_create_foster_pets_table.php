@@ -14,8 +14,8 @@ class CreateFosterPetsTable extends Migration
     public function up()
     {
         Schema::create('fosterPets', function (Blueprint $table) {
-            $table->id();
-            $table->integer('fosterFamilyId');
+            $table->increments('id');
+            $table->integer('fosterFamilyId', false, true);
             $table->string('species');
             $table->integer('age');
             $table->foreign('fosterFamilyId')->references('id')->on('fosterFamilies')->onDelete('cascade');

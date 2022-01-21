@@ -23,6 +23,7 @@ class CreateCatsTable extends Migration
             $table->string('chipNumber');
             $table->string('preferences');
             $table->string('adoptionStatus');
+            $table->timestamps();
         });
     }
 

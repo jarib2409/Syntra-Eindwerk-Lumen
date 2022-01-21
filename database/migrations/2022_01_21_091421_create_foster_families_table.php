@@ -14,14 +14,14 @@ class CreateFosterFamiliesTable extends Migration
     public function up()
     {
         Schema::create('fosterFamilies', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('firstName');
             $table->string('lastName');
             $table->date('dateOfBirth');
             $table->string('street');
             $table->string('number');
             $table->string('city');
-            $table->string('zipCode');            $table->integer('age');
+            $table->string('zipCode');            
             $table->string('email');
             $table->integer('availableSpots');            
             $table->string('preferences');

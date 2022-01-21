@@ -14,12 +14,12 @@ class CreateCatRelationsTable extends Migration
     public function up()
     {
         Schema::create('catRelations', function (Blueprint $table) {
-            $table->id();
-            $table->integer('cat1Id');
-            $table->integer('cat2Id');
+            $table->increments('id');
+            $table->integer('cat1Id', false, true);
+            $table->integer('cat2Id', false, true);
             $table->string('relation');
-            $table->foreign('cat1Id')->references('id')->on('cat')->onDelete('cascade');
-            $table->foreign('cat2Id')->references('id')->on('cat')->onDelete('cascade');
+            $table->foreign('cat1Id')->references('id')->on('cats')->onDelete('cascade');
+            $table->foreign('cat2Id')->references('id')->on('cats')->onDelete('cascade');
         });
     }
 

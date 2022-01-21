@@ -14,8 +14,8 @@ class CreateAdopterRoommatesTable extends Migration
     public function up()
     {
         Schema::create('adopterRoommates', function (Blueprint $table) {
-            $table->id();
-            $table->integer('adopterId');
+            $table->increments('id');
+            $table->integer('adopterId', false, true);
             $table->string('relation');
             $table->integer('age');
             $table->integer('allergic');

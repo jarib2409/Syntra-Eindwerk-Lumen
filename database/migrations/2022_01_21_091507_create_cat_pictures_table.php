@@ -14,8 +14,8 @@ class CreateCatPicturesTable extends Migration
     public function up()
     {
         Schema::create('catPictures', function (Blueprint $table) {
-            $table->id();
-            $table->integer('catId');
+            $table->increments('id');
+            $table->integer('catId', false, true);
             $table->integer('photoId');
             $table->foreign('catId')->references('id')->on('cats')->onDelete('cascade');
         });

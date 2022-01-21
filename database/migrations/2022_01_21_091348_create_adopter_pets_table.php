@@ -14,8 +14,8 @@ class CreateAdopterPetsTable extends Migration
     public function up()
     {
         Schema::create('adopterPets', function (Blueprint $table) {
-            $table->id();
-            $table->integer('adopterId');
+            $table->increments('id');
+            $table->integer('adopterId', false, true);
             $table->string('species');
             $table->integer('age');
             $table->integer('usedToCats');

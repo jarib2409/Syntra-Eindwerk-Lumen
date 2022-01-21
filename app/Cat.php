@@ -12,7 +12,7 @@ class Cat extends Model
      *
      * @var array
      */
-    protected $fillable = ['gender','name','birthdate','breed','furColor', 'furLength', 'chipNumber', 'preferences', 'adoptionStatus'
+    protected $fillable = ['gender','name','date','breed','furColor', 'furLength', 'chipNumber', 'preferences', 'adoptionStatus'
     ];
 
     /**

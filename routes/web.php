@@ -64,6 +64,9 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->get('adopters', ['uses' => 'AutoCatController@getAllAdopters']);
 */
     //post request
+    // Cat
+    $router->post('cats', ['uses' => 'AutoCatController@addCat']);
+
     $router->post('adopters', ['uses' => 'AutoCatController@addAdopter']);
   
 });

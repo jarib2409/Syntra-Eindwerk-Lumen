@@ -14,7 +14,7 @@ class CreateSheltersTable extends Migration
     public function up()
     {
         Schema::create('shelters', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('shelterName');
             $table->string('shelterPhoneNumber');
             $table->string('email');
