@@ -13,6 +13,7 @@ class Weihing extends Model
      * @var array
      */
     protected $fillable = [
+        'catId', 'date', 'weight'
     ];
 
     /**

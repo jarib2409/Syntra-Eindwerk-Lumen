@@ -13,6 +13,7 @@ class AdopterPet extends Model
      * @var array
      */
     protected $fillable = [
+        'adopterId', 'species', 'age', 'usedToCats', 'personality' 
     ];
 
     /**

@@ -12,7 +12,8 @@ class CatPicture extends Model
      *
      * @var array
      */
-    protected $fillable = [
+    protected $fillable = [ 
+        'catId', 'photoId'
     ];
 
     /**

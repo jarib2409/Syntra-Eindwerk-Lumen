@@ -13,6 +13,7 @@ class AdopterRoommate extends Model
      * @var array
      */
     protected $fillable = [
+        'adopterId', 'relation', 'age', 'allergic', 'permission'
     ];
 
     /**

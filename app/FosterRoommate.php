@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class FosterRoommates extends Model
+class FosterRoommate extends Model
 {
 
     /**
@@ -12,7 +12,8 @@ class FosterRoommates extends Model
      *
      * @var array
      */
-    protected $fillable = [
+    protected $fillable = [ 
+        'fosterfamilyId', 'relation', 'age'
     ];
 
     /**

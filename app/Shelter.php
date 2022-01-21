@@ -13,6 +13,7 @@ class Shelter extends Model
      * @var array
      */
     protected $fillable = [
+        'shelterName', 'shelterPhonenumber', 'email', 'hkNumber', 'firstName', 'lastName', 'dateOfBirth', 'street', 'number', 'city', 'zipCode', 'gender', 'phonenumber'
     ];
 
     /**

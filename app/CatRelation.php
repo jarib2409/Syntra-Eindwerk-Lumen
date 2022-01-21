@@ -13,6 +13,7 @@ class CatRelation extends Model
      * @var array
      */
     protected $fillable = [
+        'cat1Id', 'cat2Id', 'relation'
     ];
 
     /**

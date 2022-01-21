@@ -13,6 +13,7 @@ class FosterFamily extends Model
      * @var array
      */
     protected $fillable = [
+        'firstName', 'lastName', 'dateOfBirth', 'street', 'number', 'city', 'zipCode', 'email', 'availableSpots', 'preferences' 
     ];
 
     /**

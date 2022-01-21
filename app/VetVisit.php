@@ -13,6 +13,7 @@ class VerVisit extends Model
      * @var array
      */
     protected $fillable = [
+        'catId', 'date', 'reason', 'comments'
     ];
 
     /**
