@@ -17,6 +17,7 @@ class CreateCatPicturesTable extends Migration
             $table->increments('id');
             $table->integer('catId', false, true);
             $table->integer('photoId');
+            $table->timestamps();
             $table->foreign('catId')->references('id')->on('cats')->onDelete('cascade');
         });
     }

@@ -28,6 +28,7 @@ class CreateSheltersTable extends Migration
             $table->string('zipCode');
             $table->string('gender');
             $table->string('phoneNumber');
+            $table->timestamps();
         });
     }
 

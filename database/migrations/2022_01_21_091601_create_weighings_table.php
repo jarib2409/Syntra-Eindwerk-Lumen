@@ -18,6 +18,7 @@ class CreateWeighingsTable extends Migration
             $table->integer('catId', false, true);
             $table->integer('shelterId', false, true);
             $table->integer('weight');
+            $table->timestamps();
             $table->foreign('catId')->references('id')->on('cats')->onDelete('cascade');
             $table->foreign('shelterId')->references('id')->on('shelters')->onDelete('cascade');
         });

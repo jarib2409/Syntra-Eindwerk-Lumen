@@ -18,6 +18,7 @@ class CreateCatRelationsTable extends Migration
             $table->integer('cat1Id', false, true);
             $table->integer('cat2Id', false, true);
             $table->string('relation');
+            $table->timestamps();
             $table->foreign('cat1Id')->references('id')->on('cats')->onDelete('cascade');
             $table->foreign('cat2Id')->references('id')->on('cats')->onDelete('cascade');
         });

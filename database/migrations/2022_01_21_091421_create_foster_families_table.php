@@ -25,6 +25,7 @@ class CreateFosterFamiliesTable extends Migration
             $table->string('email');
             $table->integer('availableSpots');            
             $table->string('preferences');
+            $table->timestamps();
         });
     }
 

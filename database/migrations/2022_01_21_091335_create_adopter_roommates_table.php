@@ -20,6 +20,7 @@ class CreateAdopterRoommatesTable extends Migration
             $table->integer('age');
             $table->integer('allergic');
             $table->integer('permission');
+            $table->timestamps();
             $table->foreign('adopterId')->references('id')->on('adopters')->onDelete('cascade');
         });
     }

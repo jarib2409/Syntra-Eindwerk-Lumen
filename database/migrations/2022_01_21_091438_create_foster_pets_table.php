@@ -18,6 +18,7 @@ class CreateFosterPetsTable extends Migration
             $table->integer('fosterFamilyId', false, true);
             $table->string('species');
             $table->integer('age');
+            $table->timestamps();
             $table->foreign('fosterFamilyId')->references('id')->on('fosterFamilies')->onDelete('cascade');
         });
     }

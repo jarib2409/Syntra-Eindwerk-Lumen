@@ -18,6 +18,7 @@ class CreateFosterRoommatesTable extends Migration
             $table->integer('fosterFamilyId', false, true);
             $table->string('relation');
             $table->integer('age');
+            $table->timestamps();
             $table->foreign('fosterFamilyId')->references('id')->on('fosterFamilies')->onDelete('cascade');
         });
     }

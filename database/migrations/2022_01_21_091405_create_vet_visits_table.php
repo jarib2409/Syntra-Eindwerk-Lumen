@@ -19,6 +19,7 @@ class CreateVetVisitsTable extends Migration
             $table->date('date');
             $table->string('reason');
             $table->string('comments');
+            $table->timestamps();
             $table->foreign('catId')->references('id')->on('cats')->onDelete('cascade');
         });
     }

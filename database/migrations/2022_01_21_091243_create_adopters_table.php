@@ -18,7 +18,8 @@ class CreateAdoptersTable extends Migration
             $table->string('firstName');
             $table->string('lastName');
             $table->string('email');
-            $table->date('date');
+            $table->date('dateOfBirth');
+            $table->string('gender');
             $table->string('street');
             $table->string('number');
             $table->string('city');
@@ -33,6 +34,7 @@ class CreateAdoptersTable extends Migration
             $table->integer('allowedOutside');
             $table->integer('hoursAlone');
             $table->string('preferences');
+            $table->timestamps();
         });
     }
 
