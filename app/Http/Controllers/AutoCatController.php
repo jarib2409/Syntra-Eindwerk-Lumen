@@ -18,18 +18,7 @@ use App\VetVisit;
 use App\Weighing;
 use Illuminate\Http\Request;
 use DB;
-// Illuminate\Support\Facades\DB
 
-
-        /*  
-        SELECT authors.name AS author, books.name AS book, books.price FROM authors
-        JOIN books ON authors.id = books.author.id
-        */ 
-
-        /* 
-        SELECT authors.name AS author, books.name AS book, books.price FROM authors
-        JOIN books ON authors.id = books.author.id
-        */ 
 class AutoCatController extends Controller
 {
 
@@ -82,7 +71,7 @@ class AutoCatController extends Controller
         return response()->json(Adopter::findOrFail($id));
     }
 
-    public function createAdopter(Request $request)
+    public function addAdopter(Request $request)
     {
         $adopter = Adopter::create($request->all());
 
@@ -117,7 +106,7 @@ class AutoCatController extends Controller
         return response()->json(FosterFamily::findOrFail($id));
     }
 
-    public function createFosterFamily(Request $request)
+    public function addFosterFamily(Request $request)
     {
         $FosterFamily = FosterFamily::create($request->all());
 
@@ -187,7 +176,7 @@ class AutoCatController extends Controller
         return response()->json(AdopterRoommate::where('adopterId', $id));
     }
 
-    public function createAdopterRoommate(Request $request)
+    public function addAdopterRoommate(Request $request)
     {
         $adopterRoommate = AdopterRoommate::create($request->all());
 
@@ -222,7 +211,7 @@ class AutoCatController extends Controller
         return response()->json(AdopterPets::where('adopterId', $id));
     }
 
-    public function createAdopterPet(Request $request)
+    public function addAdopterPet(Request $request)
     {
         $adopterPet = AdopterPets::create($request->all());
 
@@ -257,7 +246,7 @@ class AutoCatController extends Controller
         return response()->json(VetVisit::where('catId', $id));
     }
 
-    public function createVetVisit(Request $request)
+    public function addVetVisit(Request $request)
     {
         $vetVisit = VetVisit::create($request->all());
 
@@ -292,7 +281,7 @@ class AutoCatController extends Controller
         return response()->json(FosterPet::where('fosterFamilyId', $id));
     }
 
-    public function createFosterPet(Request $request)
+    public function addFosterPet(Request $request)
     {
         $FosterPet = FosterPet::create($request->all());
 
@@ -327,7 +316,7 @@ class AutoCatController extends Controller
         return response()->json(FosterRoommate::where('fosterFamilyId', $id));
     }
 
-    public function createFosterRoommate(Request $request)
+    public function addFosterRoommate(Request $request)
     {
         $FosterRoommate = FosterRoommate::create($request->all());
 
@@ -397,7 +386,7 @@ class AutoCatController extends Controller
         return response()->json(Shelter::findOrFail($id));
     }
 
-    public function createShelter(Request $request)
+    public function addShelter(Request $request)
     {
         $shelter = Shelter::create($request->all());
 
@@ -432,7 +421,7 @@ class AutoCatController extends Controller
         return response()->json(Weighing::where('catId', $id));
     }
 
-    public function createWeighing(Request $request)
+    public function addWeighing(Request $request)
     {
         $weighing = Weighing::create($request->all());
 
@@ -457,31 +446,4 @@ class AutoCatController extends Controller
     ///////////////////////////////////////////////// NotificationController /////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
    
-
-
-    /* public function showOneAuthor($id)
-    {
-        return response()->json(Author::find($id));
-    }
-
-    public function create(Request $request)
-    {
-        $author = Author::create($request->all());
-
-        return response()->json($author, 201);
-    }
-
-    public function update($id, Request $request)
-    {
-        $author = Author::findOrFail($id);
-        $author->update($request->all());
-
-        return response()->json($author, 200);
-    }
-
-    public function delete($id)
-    {
-        Author::findOrFail($id)->delete();
-        return response('Deleted Successfully', 200);
-    } */
 }
