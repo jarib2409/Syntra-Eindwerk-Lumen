@@ -22,4 +22,7 @@ class Shelter extends Model
      * @var array
      */
     protected $hidden = [];
+
+    protected $table = 'shelters';
+
 }

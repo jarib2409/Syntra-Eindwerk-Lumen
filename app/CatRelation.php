@@ -22,4 +22,7 @@ class CatRelation extends Model
      * @var array
      */
     protected $hidden = [];
+
+    protected $table = 'catRelations';
+
 }

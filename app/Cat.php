@@ -21,4 +21,7 @@ class Cat extends Model
      * @var array
      */
     protected $hidden = [];
+
+    protected $table = 'cats';
+
 }

@@ -22,4 +22,7 @@ class VerVisit extends Model
      * @var array
      */
     protected $hidden = [];
+
+    protected $table = 'vetVisits';
+
 }

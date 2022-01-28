@@ -22,4 +22,7 @@ class AdopterRoommate extends Model
      * @var array
      */
     protected $hidden = [];
+
+    protected $table = 'adopterRoommates';
+
 }
