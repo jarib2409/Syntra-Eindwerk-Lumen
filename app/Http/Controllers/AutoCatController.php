@@ -38,6 +38,8 @@ class AutoCatController extends Controller
 
     public function addCat(Request $request)
     {
+        // Testing purposes for postman or insomnia  (dd = dump & die, output extensive info en stop execution)
+        //dd($request);
         $cat = Cat::create($request->all());
 
         return response()->json($cat, 201);
