@@ -81,7 +81,8 @@ CREATE TABLE fosterFamilies (
     zipCode VARCHAR(10),	
     email VARCHAR(50),	
     availableSpots INTEGER,	
-    preferences VARCHAR(300)	
+    preferences VARCHAR(300),
+    	
 );
 DROP TABLE IF EXISTS fosterPets;
 CREATE TABLE fosterPets (
@@ -119,7 +120,8 @@ CREATE TABLE shelters (
     city VARCHAR(30),
     zipCode VARCHAR(10),
     gender CHAR(1),
-    phonenumber VARCHAR(15)
+    phonenumber VARCHAR(15),
+    
 );
 DROP TABLE IF EXISTS weighings;
 CREATE TABLE weighings (
