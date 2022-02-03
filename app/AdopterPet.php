@@ -22,4 +22,7 @@ class AdopterPet extends Model
      * @var array
      */
     protected $hidden = [];
+
+    protected $table = 'adopterPets';
+
 }
